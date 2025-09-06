@@ -54,6 +54,7 @@ export default function Home() {
   return (
     <div className="font-sans bg-[#101318] flex flex-col items-center justify-items-center min-h-screen py-10 m-0">
       
+      <img src="iconbg.png" className="absolute top-0 right-0" alt="" />
         <div className="container w-full">
           <div className="flex relative mb-20">
           <NavigationMenu viewport={false} className="w-full justify-between">
@@ -90,8 +91,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        </div>
 
+        <div className="w-full relative mt-10 border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[32px] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between">
+          <div className="flex flex-col items-start justify-center gap-2">
+            <h2 className="text-white text-xl font-bold">About Me</h2>
+            <p className="text-white">I am a passionate front-end developer with a knack for creating stunning user interfaces.</p>
+          </div>
+        </div>
+        </div>
 
 
     </div>
