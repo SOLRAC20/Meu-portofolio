@@ -12,43 +12,32 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-const components: { title: string; href: string; description: string }[] = [
+const components = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    title: "GitHub",
+    href: "/docs/primitives/components/alert-dialog",
+    description: "A modal dialog that interrupts the user with important content and expects a response.",
+    icon: CircleIcon,
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
+    title: "LinkedIn",
+    href: "/docs/primitives/components/alert-dialog",
+    description: "A modal dialog that interrupts the user with important content and expects a response.",
+    icon: CircleIcon,
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    title: "Instagram",
+    href: "/docs/primitives/components/alert-dialog",
+    description: "A modal dialog that interrupts the user with important content and expects a response.",
+    icon: CircleIcon,
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Twitter",
+    href: "/docs/primitives/components/alert-dialog",
+    description: "A modal dialog that interrupts the user with important content and expects a response.",
+    icon: CircleIcon,
   },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-]
+  ]
 
 export default function Home() {
   return (
@@ -83,15 +72,26 @@ export default function Home() {
 
           <div className="relative">
             
-            <div className="relative top-0 left-0 w-[500px] h-[500px] blur-lg border-8 border-[#FCE803] rounded-full flex items-center justify-center">
-
+            <div className="relative top-0 left-0 w-[400px] h-[400px] blur-lg border-8 border-[#FCE803] rounded-full flex items-center justify-center">
             </div>
-            <div className="absolute top-0 left-0 w-[500px] h-[500px] border-10 border-[#FCE803] rounded-full flex items-center justify-center">
+            <div className="absolute top-0 left-0 w-[400px] h-[400px] border-10 border-[#FCE803] rounded-full flex items-center justify-center overflow-hidden">
+              <img src="/00212.jpg" alt="" className="object-top w-full h-full" />
 
             </div>
           </div>
         </div>
 
+        <div className="grid lg:grid-cols-4 gap-4">
+        {components.map((component) => (
+          <div className="w-full relative mt-10 border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[32px] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between">
+          <div className="flex flex-col items-start justify-center gap-2">
+            <h2 className="text-white text-xl font-bold">{component.title}</h2>
+            <p className="text-white">{component.description}</p>
+          </div>
+        </div>
+        ))}
+
+        </div>
         <div className="w-full relative mt-10 border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[32px] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between">
           <div className="flex flex-col items-start justify-center gap-2">
             <h2 className="text-white text-xl font-bold">About Me</h2>
