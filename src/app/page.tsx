@@ -113,7 +113,7 @@ const components = [
       title: "Premios Nacional",
 
       img: "img/evolium.png",
-      description: "Descrição do projecto 1.",
+      description: "Descrição do projecto 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 
       link: "#"
     },
@@ -121,7 +121,7 @@ const components = [
       title: "Site Evolium",
 
       img: "img/premios.png",
-      description: "Descrição do projecto 1.",
+      description: "Descrição do projecto 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 
       link: "#"
     },
