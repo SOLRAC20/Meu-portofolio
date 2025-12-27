@@ -152,7 +152,7 @@ const components = [
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const roles = ["FRONT END DEVELOPER", "Software Engineer", "Web Developer"];
+  const roles = ["Web Developer", "Software Engineer", "Web Developer"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -166,8 +166,8 @@ export default function Home() {
     <div className="font-sans bg-[#101318] flex flex-col items-center justify-items-center min-h-screen py-10 m-0">
       
       <img src="iconbg.png" className="absolute top-0 right-0" alt="" />
-        <div className="container w-full">
-          <div className="flex relative mb-20">
+        <div className="w-full flex flex-col items-center">
+          <div className="flex relative container mb-20">
           <NavigationMenu viewport={false} className="w-full justify-between">
       <NavigationMenuList className="">
         <NavigationMenuItem className="">
@@ -184,7 +184,7 @@ export default function Home() {
           </NavigationMenu>
         </div>
 
-        <div className="w-full flex justify-between items-center relative mb-20">
+        <div className="w-full container flex justify-between items-center relative mb-20">
           <div>
             <div className="flex flex-col items-start justify-center gap-2 mb-8">
             <h1 className="text-white text-3xl font-[500]">Olá,</h1>
@@ -221,7 +221,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-4 gap-4">
+        <div className="w-full container grid grid-cols-4 gap-4">
 
           {steps.map((step, index) => (
 
@@ -232,7 +232,25 @@ export default function Home() {
           </div>
           ))}
         </div>
-        <section>
+        <section className="bg-[url('/img/bgsection.png')] w-full flex flex-col items-center bg-no-repeat bg-cover mt-20 p-10 rounded-3xl">
+          <h1 className="text-2xl text-white text-center font-bold my-10">Sobre Mim</h1>
+
+          <div className="grid lg:grid-cols-5 gap-4 mb-10 container">
+            <div className="col-span-3 flex flex-col items-start gap-4">
+              <h1 className="p-4 border-2 border-[#12F7D6] text-white bg-[#292F36] text-4xl font-medium rounded-tl-2xl rounded-br-2xl">Sobre Mim</h1>
+              <div className="bg-[#292F36] p-4 rounded-2xl">
+                <p className="text-white mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p className="text-white mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p className="text-white mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+
+            <div className="col-span-2 flex justify-center">
+              <img src="/img/programador.jpg" alt="" className="w-[350px] rounded-2xl" />
+            </div>
+          </div>
+        </section>
+        <section className="container">
           <h1 className="text-2xl text-white text-center font-bold my-10">Tecnologias e Ferramentas</h1>
           <div className="grid lg:grid-cols-4 gap-4 mb-10">
             <div className="lg:col-span-4">
