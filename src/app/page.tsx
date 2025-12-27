@@ -14,6 +14,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { useState, useEffect } from "react"
+import { title } from "process";
 
 const components = [
   {
@@ -42,6 +43,25 @@ const components = [
     
 
     }
+  ];
+
+  const steps = [
+    {
+      title: "Sobre mim",
+      step: 1,
+    },
+    {
+      title: "Tecnologias",
+      step: 2,
+    },
+    {
+      title: "Projetos",
+      step: 3,
+    },
+    {
+      title: "Contato",
+      step: 4,
+    },
   ]
 
   const backendComponents = [
@@ -151,13 +171,13 @@ export default function Home() {
           <NavigationMenu viewport={false} className="w-full justify-between">
       <NavigationMenuList className="">
         <NavigationMenuItem className="">
-          <Button className="bg-[#101318] hover:bg-[#101318] hover:text-[#FCE803] text-white">Button</Button>
+          <Button className="bg-[#101318] hover:bg-[#101318] hover:text-[#12F7D6] text-white">Button</Button>
           
         </NavigationMenuItem>
       </NavigationMenuList>
       <NavigationMenuList className="">
         <NavigationMenuItem className="flex">
-          <Button className="bg-[#101318] hover:bg-[#101318] hover:text-[#FCE803] text-white">Button</Button>
+          <Button className="bg-[#101318] hover:bg-[#101318] hover:text-[#12F7D6] text-white">Button</Button>
           
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -167,10 +187,12 @@ export default function Home() {
         <div className="w-full flex justify-between items-center relative mb-20">
           <div>
             <div className="flex flex-col items-start justify-center gap-2 mb-8">
-            <h1 className="text-white text-2xl font-bold">Carlos Xavier</h1>
-            <div className="h-12 overflow-hidden">
+            <h1 className="text-white text-3xl font-[500]">Olá,</h1>
+            <h1 className="text-white text-3xl font-[500]">Meu nome é <span className="text-[#12F7D6]">Carlos Xavier</span></h1>
+            <div className="h-12 overflow-hidden flex items-center">
+              <p className="text-white text-3xl font-[500] me-2">eu sou</p>
               <p 
-                className="text-[#FCE803] text-4xl font-bold transition-all duration-500 ease-in-out"
+                className="text-[#12F7D6] text-4xl font-[500] transition-all duration-500 ease-in-out"
                 style={{
                   transform: `translateY(-${currentIndex * 30}%)`,
                 }}
@@ -184,40 +206,45 @@ export default function Home() {
             </div>
           </div>
           
-          <Button className="rounded-full px-6 py-6 bg-[#FCE803] text-black shadow-[0_4px_64px_0_#FCE80352]">Entrar em contacto</Button>
+          <Button className="rounded-full px-6 py-6 bg-[#12F7D6] text-black shadow-[0_4px_64px_0_#12F7D652]">Entrar em contacto</Button>
             
           </div>
 
           <div className="relative">
             
-            <div className="relative top-0 left-0 w-[400px] h-[400px] blur-lg border-8 border-[#FCE803] rounded-full flex items-center justify-center">
+            <div className="relative top-0 left-0 w-[400px] h-[400px] blur-lg border-8 border-[#12F7D6] rounded-full flex items-center justify-center">
             </div>
-            <div className="absolute top-0 left-0 w-[400px] h-[400px] border-10 border-[#FCE803] rounded-full flex items-center justify-center overflow-hidden">
+            <div className="absolute top-0 left-0 w-[400px] h-[400px] border-10 border-[#12F7D6] rounded-full flex items-center justify-center overflow-hidden">
               <img src="/00212.jpg" alt="" className="object-top w-full h-full" />
 
             </div>
           </div>
         </div>
 
-        <div className="w-full relative mt-10 border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[32px] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between">
-          <div className="flex flex-col items-start justify-center gap-2">
-            <h2 className="text-[#FCE803] text-xl font-bold">Sobre mim</h2>
-            <p className="text-white">Sou um Web Developer focado em criar interfaces modernas, rápidas e funcionais. Gosto de transformar ideias em experiências digitais claras e intuitivas, combinando boas práticas de desenvolvimento com um design limpo e responsivo.es.</p>
+        <div className="w-full grid grid-cols-4 gap-4">
+
+          {steps.map((step, index) => (
+
+
+          <div className="flex items-center gap-2  relative mt-10 border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[22px] p-4 px-10  shadow-[0px_1px_0px_0px_#ffffff14] transition-all duration-300 hover:scale-102 hover:text-[#12F7D6] hover:shadow-[0_1px_14px_0_#12F7D652]   min-h-[100px]">
+            <h2 className="text-[#12F7D6] text-5xl font-bold">{step.step}</h2>
+            <p className="text-white">{step.title}</p>
           </div>
+          ))}
         </div>
         <section>
           <h1 className="text-2xl text-white text-center font-bold my-10">Tecnologias e Ferramentas</h1>
           <div className="grid lg:grid-cols-4 gap-4 mb-10">
             <div className="lg:col-span-4">
-              <h1 className="text-xl font-semibold text-[#FCE803]">Frontend</h1>
+              <h1 className="text-xl font-semibold text-[#12F7D6]">Frontend</h1>
             </div>
         {components.map((component, index) => (
           <div
-          key={index} className="w-full relative border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[32px] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between">
+          key={index} className="w-full relative border-1 border-[#FFFFFF0A] text-white bg-[#FFFFFF05] rounded-[22px] p-4 px-10 shadow-[0px_1px_0px_0px_#ffffff14] transition-all duration-300 hover:scale-102 hover:text-[#12F7D6] hover:shadow-[0_1px_14px_0_#12F7D652] min-h-[200px] flex items-center justify-between">
           <div className="flex flex-col justify-center gap-2">
             {component.icon}
-            <h2 className="text-white text-xl font-bold text-center">{component.title}</h2>
-            <p className="text-white">{component.description}</p>
+            <h2 className=" text-xl font-bold text-center">{component.title}</h2>
+            <p className="">{component.description}</p>
           </div>
         </div>
         ))}
@@ -225,11 +252,11 @@ export default function Home() {
         </div>
           <div className="grid lg:grid-cols-4 gap-4 mb-10">
             <div className="lg:col-span-4">
-              <h1 className="text-xl font-semibold text-[#FCE803]">Backend</h1>
+              <h1 className="text-xl font-semibold text-[#12F7D6]">Backend</h1>
             </div>
         {backendComponents.map((component, index) => (
           <div
-          key={index} className="w-full relative border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[32px] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between">
+          key={index} className="w-full relative border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[22px] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between">
           <div className="flex flex-col justify-center gap-2">
             {component.icon}
             <h2 className="text-white text-xl font-bold text-center">{component.title}</h2>
@@ -241,11 +268,11 @@ export default function Home() {
         </div>
           <div className="grid lg:grid-cols-4 gap-4 mb-10">
             <div className="lg:col-span-4">
-              <h1 className="text-xl font-semibold text-[#FCE803]">Ferramentas</h1>
+              <h1 className="text-xl font-semibold text-[#12F7D6]">Ferramentas</h1>
             </div>
         {ToolsComponents.map((component, index) => (
           <div
-          key={index} className="w-full relative border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[32px] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between">
+          key={index} className="w-full relative border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[22px] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between">
           <div className="flex flex-col justify-center gap-2">
             {component.icon}
             <h2 className="text-white text-xl font-bold text-center">{component.title}</h2>
@@ -261,7 +288,7 @@ export default function Home() {
           
           <div className="grid lg:grid-cols-4 gap-4 mb-10">
         {projectos.map((component, index) => (
-          <div className="rounded-[32px] overflow-hidden border-1 h-[600px] border-[#FFFFFF0A]">
+          <div className="rounded-[22px] overflow-hidden border-1 h-[600px] border-[#FFFFFF0A]">
             <img src={component.img} alt={component.title} className="h-55" />
             <div 
           key={index} className="w-full relative border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-b-[32px] p-4 px-4 shadow-[inset_0px_1px_0px_0px_#ffffff14]  h-full flex justify-between">
@@ -270,7 +297,7 @@ export default function Home() {
             <h2 className="text-white text-xl font-bold">{component.title}</h2>
             <p className="text-white">{component.description}</p>
 
-            <Button className="mt-4 bg-[#FCE803] rounded-full shadow-[0_4px_64px_0_#FCE80352] text-black">Ver mais</Button>
+            <Button className="mt-4 bg-[#12F7D6] rounded-full shadow-[0_4px_64px_0_#12F7D652] text-black">Ver mais</Button>
           </div>
         </div>
         </div>
