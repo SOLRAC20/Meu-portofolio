@@ -200,7 +200,7 @@ export default function Home() {
           </NavigationMenu>
         </div>
 
-        <div className="w-full container flex justify-between items-center relative mb-20">
+        <div className="w-full container flex justify-between flex-col-reverse lg:flex-row items-center relative mb-20">
           <div>
             <div className="flex flex-col items-start justify-center gap-2 mb-8">
             <h1 className="text-white text-3xl font-[500]">Olá,</h1>
@@ -237,12 +237,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full container grid grid-cols-4 gap-4">
+        <div className="w-full container grid grid-cols-2 mt-10 lg:grid-cols-4 gap-4">
 
           {steps.map((step, index) => (
 
 
-          <div className="flex items-center gap-2  relative mt-10 bg-[#FFFFFF05] border-2 rounded-tl-[22px] rounded-br-[22px] border-[#12F7D6] p-4 px-10  shadow-[0px_1px_0px_0px_#ffffff14] transition-all duration-300 hover:scale-102 hover:text-[#12F7D6] hover:shadow-[0_1px_14px_0_#12F7D652]   min-h-[100px]">
+          <div className="flex items-center gap-2  relative mb-4 bg-[#FFFFFF05] border-2 rounded-tl-[22px] rounded-br-[22px] border-[#12F7D6] p-4 px-10  shadow-[0px_1px_0px_0px_#ffffff14] transition-all duration-300 hover:scale-102 hover:text-[#12F7D6] hover:shadow-[0_1px_14px_0_#12F7D652]   min-h-[100px]">
             <h2 className="text-[#12F7D6] text-5xl font-bold">{step.step}</h2>
             <p className="text-white">{step.title}</p>
           </div>
