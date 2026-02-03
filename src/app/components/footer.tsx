@@ -2,7 +2,7 @@ import * as React from "react"
 import Link from "next/link"
 import { Github, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 
-function Footer(): JSX.Element {
+function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 mt-20 w-full">
       <div className="container mx-auto px-4 py-12">
