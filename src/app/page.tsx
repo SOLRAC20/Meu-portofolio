@@ -226,7 +226,7 @@ export default function Home() {
           {steps.map((step, index) => (
 
 
-          <div className="flex items-center gap-2  relative mt-10 border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[22px] p-4 px-10  shadow-[0px_1px_0px_0px_#ffffff14] transition-all duration-300 hover:scale-102 hover:text-[#12F7D6] hover:shadow-[0_1px_14px_0_#12F7D652]   min-h-[100px]">
+          <div className="flex items-center gap-2  relative mt-10 bg-[#FFFFFF05] border-2 rounded-tl-[22px] rounded-br-[22px] border-[#12F7D6] p-4 px-10  shadow-[0px_1px_0px_0px_#ffffff14] transition-all duration-300 hover:scale-102 hover:text-[#12F7D6] hover:shadow-[0_1px_14px_0_#12F7D652]   min-h-[100px]">
             <h2 className="text-[#12F7D6] text-5xl font-bold">{step.step}</h2>
             <p className="text-white">{step.title}</p>
           </div>
@@ -250,7 +250,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="container">
+        <section className="container ">
           <h1 className="text-2xl text-white text-center font-bold my-10">Tecnologias e Ferramentas</h1>
           <div className="grid lg:grid-cols-4 gap-4 mb-10">
             <div className="lg:col-span-4">
@@ -258,7 +258,7 @@ export default function Home() {
             </div>
         {components.map((component, index) => (
           <div
-          key={index} className="w-full relative border-1 border-[#FFFFFF0A] text-white bg-[#FFFFFF05] rounded-[22px] p-4 px-10 shadow-[0px_1px_0px_0px_#ffffff14] transition-all duration-300 hover:scale-102 hover:text-[#12F7D6] hover:shadow-[0_1px_14px_0_#12F7D652] min-h-[200px] flex items-center justify-between">
+          key={index} className="w-full relative border-2  text-white bg-[#FFFFFF05] rounded-tl-[22px] rounded-br-[22px] border-[#12F7D6] p-4 px-10 shadow-[0px_1px_0px_0px_#ffffff14] transition-all duration-300 hover:scale-102 hover:text-[#12F7D6] hover:shadow-[0_1px_14px_0_#12F7D652] min-h-[200px] flex items-center justify-between">
           <div className="flex flex-col justify-center gap-2">
             {component.icon}
             <h2 className=" text-xl font-bold text-center">{component.title}</h2>
@@ -274,7 +274,7 @@ export default function Home() {
             </div>
         {backendComponents.map((component, index) => (
           <div
-          key={index} className="w-full relative border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[22px] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between">
+          key={index} className="w-full relative bg-[#FFFFFF05] border-2 rounded-tl-[22px] rounded-br-[22px] border-[#12F7D6] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between hover:text-[#12F7D6] hover:shadow-[0_1px_14px_0_#12F7D652] transition-all duration-300 hover:scale-102">
           <div className="flex flex-col justify-center gap-2">
             {component.icon}
             <h2 className="text-white text-xl font-bold text-center">{component.title}</h2>
@@ -290,7 +290,7 @@ export default function Home() {
             </div>
         {ToolsComponents.map((component, index) => (
           <div
-          key={index} className="w-full relative border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-[22px] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between">
+          key={index} className="w-full relative bg-[#FFFFFF05] border-2 rounded-tl-[22px] rounded-br-[22px] border-[#12F7D6] p-4 px-10 shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center justify-between hover:text-[#12F7D6] hover:shadow-[0_1px_14px_0_#12F7D652] transition-all duration-300 hover:scale-102">
           <div className="flex flex-col justify-center gap-2">
             {component.icon}
             <h2 className="text-white text-xl font-bold text-center">{component.title}</h2>
@@ -301,15 +301,15 @@ export default function Home() {
 
         </div>
         </section>
-        <section>
+        <section className="container ">
           <h1 className="text-2xl text-white text-center font-bold my-10">Projectos</h1>
           
           <div className="grid lg:grid-cols-4 gap-4 mb-10">
         {projectos.map((component, index) => (
-          <div className="rounded-[22px] overflow-hidden border-1 h-[600px] border-[#FFFFFF0A]">
-            <img src={component.img} alt={component.title} className="h-55" />
+          <div className="w-full relative bg-[#FFFFFF05] border-2 rounded-tl-[22px] rounded-br-[22px] overflow-hidden border-[#12F7D6] shadow-[inset_0px_1px_0px_0px_#ffffff14]  min-h-[200px] flex items-center flex-col justify-between hover:text-[#12F7D6] hover:shadow-[0_1px_14px_0_#12F7D652] transition-all duration-300 hover:scale-102]">
+            <img src={component.img} alt={component.title} className="w-full h-55" />
             <div 
-          key={index} className="w-full relative border-1 border-[#FFFFFF0A] bg-[#FFFFFF05] rounded-b-[32px] p-4 px-4 shadow-[inset_0px_1px_0px_0px_#ffffff14]  h-full flex justify-between">
+          key={index} className="w-full relative p-4 px-4 shadow-[inset_0px_1px_0px_0px_#ffffff14]  h-full flex justify-between">
           <div className="flex flex-col items-start justify-start gap-2">
             
             <h2 className="text-white text-xl font-bold">{component.title}</h2>
