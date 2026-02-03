@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { useState, useEffect } from "react"
 import { title } from "process";
+import { Footer } from "./components/footer";
 
 const components = [
   {
@@ -148,11 +149,27 @@ const components = [
 
       link: "#"
     },
+    {
+      title: "Site Evolium",
+
+      img: "img/premios.png",
+      description: "Descrição do projecto 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+      link: "#"
+    },
+    {
+      title: "Site Evolium",
+
+      img: "img/premios.png",
+      description: "Descrição do projecto 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+      link: "#"
+    },
   ];
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const roles = ["Web Developer", "Software Engineer", "Web Developer"];
+  const roles = ["Web Developer", "Software Engineer", "Mobile Developer"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -163,9 +180,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="font-sans bg-[#101318] flex flex-col items-center justify-items-center min-h-screen py-10 m-0">
+    <div className="font-sans bg-[#101318] flex flex-col items-center justify-items-center min-h-screen pt-10 m-0">
       
-      <img src="iconbg.png" className="absolute top-0 right-0" alt="" />
         <div className="w-full flex flex-col items-center">
           <div className="flex relative container mb-20">
           <NavigationMenu viewport={false} className="w-full justify-between">
@@ -189,12 +205,12 @@ export default function Home() {
             <div className="flex flex-col items-start justify-center gap-2 mb-8">
             <h1 className="text-white text-3xl font-[500]">Olá,</h1>
             <h1 className="text-white text-3xl font-[500]">Meu nome é <span className="text-[#12F7D6]">Carlos Xavier</span></h1>
-            <div className="h-12 overflow-hidden flex items-center">
+            <div className="h-12 overflow-hidden flex">
               <p className="text-white text-3xl font-[500] me-2">eu sou</p>
               <p 
                 className="text-[#12F7D6] text-4xl font-[500] transition-all duration-500 ease-in-out"
                 style={{
-                  transform: `translateY(-${currentIndex * 30}%)`,
+                  transform: `translateY(-${currentIndex * 100}%)`,
                 }}
               >
                 {roles.map((role, index) => (
@@ -326,6 +342,8 @@ export default function Home() {
         </div>
 
 
+    <Footer />
     </div>
+
   );
 }
